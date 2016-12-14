@@ -12,7 +12,7 @@ ExternalProject_Add(hello_project
 ExternalProject_Get_Property(hello_project install_dir)
 
 
-add_library(hello STATIC IMPORTED)
+add_library(hello SHARED IMPORTED)
 set_property(TARGET hello PROPERTY IMPORTED_LOCATION ${hello_install_dir}/lib/libhello.so)
 add_dependencies(hello hello_project)
 
